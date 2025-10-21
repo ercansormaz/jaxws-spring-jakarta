@@ -1,0 +1,45 @@
+COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.1
+
+This is an educational fork of the original jaxws-spring library
+(org.jvnet.jax-ws-commons.spring:jaxws-spring, 2013),
+modernized for Jakarta EE and Spring Boot 3.
+
+Original library was licensed under CDDL 1.1 and GPL 2.0.
+
+---
+
+1. Definitions
+
+"Contributor" means each individual or legal entity that
+creates or contributes to the creation of Modifications.
+
+"Covered Software" means the original software, including
+Modifications made by the Contributor.
+
+2. License Grants
+
+Subject to the terms of this License, each Contributor hereby grants
+You a world-wide, royalty-free, non-exclusive license to use,
+modify, reproduce, display, perform, sublicense, and distribute
+the Covered Software in source or binary form.
+
+3. Requirements
+
+You must include this License and the "educational fork" notice
+in any distribution of the Covered Software or its derivatives.
+
+4. Disclaimer
+
+The Covered Software is provided "AS IS", without warranty of any kind.
+The entire risk as to the quality and performance of the Covered Software
+is with you. In no event shall the Contributors be liable for any damages.
+
+5. Termination
+
+This License is terminated if you fail to comply with its terms.
+
+---
+
+For the full text of the CDDL 1.1, see:
+https://opensource.org/license/cddl-1-1
+

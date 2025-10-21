@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>dev.ercan</groupId>
+  <artifactId>jaxws-spring-jakarta</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>JAX-WS Spring Jakarta</name>
+  <description>Jakarta and Spring Boot 3 compatible fork of the legacy jaxws-spring library.</description>
+  <url>https://github.com/ercansormaz/jaxws-spring-jakarta</url>
+
+  <licenses>
+    <license>
+      <name>Common Development and Distribution License (CDDL) 1.1</name>
+      <url>https://opensource.org/license/cddl-1-1</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Ercan SORMAZ</name>
+      <email>me@ercan.dev</email>
+      <url>https://github.com/ercansormaz</url>
+      <properties>
+        <gpg>0x4C6B131C812FC43A</gpg>
+        <linkedin>https://www.linkedin.com/in/ercansormaz/</linkedin>
+      </properties>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/ercansormaz/jaxws-spring-jakarta.git</connection>
+    <developerConnection>scm:git:ssh://github.com/ercansormaz/jaxws-spring-jakarta.git</developerConnection>
+    <url>https://github.com/ercansormaz/jaxws-spring-jakarta</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <properties>
+    <java.version>17</java.version>
+    <spring-version>6.2.11</spring-version>
+    <jax-ws-version>4.0.3</jax-ws-version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring-version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring-version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>servlet</artifactId>
+      <version>${jax-ws-version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.14.1</version>
+        <configuration>
+          <release>${java.version}</release>
+        </configuration>
+      </plugin>
+
+      <!-- Attach sources -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.3.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Attach javadocs -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.6.3</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Sign artifacts -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.2.2</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Publish to Sonatype OSSRH -->
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.9.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
