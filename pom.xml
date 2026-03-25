@@ -43,7 +43,7 @@
     <connection>scm:git:git://github.com/ercansormaz/jaxws-spring-jakarta.git</connection>
     <developerConnection>scm:git:ssh://github.com/ercansormaz/jaxws-spring-jakarta.git</developerConnection>
     <url>https://github.com/ercansormaz/jaxws-spring-jakarta</url>
-    <tag>HEAD</tag>
+    <tag>${project.version}</tag>
   </scm>
 
   <properties>
