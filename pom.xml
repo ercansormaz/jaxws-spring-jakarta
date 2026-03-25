@@ -16,7 +16,7 @@
   <packaging>jar</packaging>
 
   <name>JAX-WS Spring Jakarta</name>
-  <description>Jakarta and Spring Boot 3 compatible fork of the legacy jaxws-spring library.</description>
+  <description>Jakarta and Spring Boot 4 compatible fork of the legacy jaxws-spring library.</description>
   <url>https://github.com/ercansormaz/jaxws-spring-jakarta</url>
 
   <licenses>
