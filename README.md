@@ -2,14 +2,14 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/dev.ercan/jaxws-spring-jakarta.svg)](https://search.maven.org/artifact/dev.ercan/jaxws-spring-jakarta)
 
-**Jakarta-compatible SOAP library for Java 17+ and Spring Boot 3, designed for bottom-up development: generate WSDL from Java classes.**
+**Jakarta-compatible SOAP library for Java 17+ and Spring Boot 4, designed for bottom-up development: generate WSDL from Java classes.**
 
 ---
 
 ## ⚠️ Disclaimer
 
 This project is an **unofficial fork** of the original [org.jvnet.jax-ws-commons.spring:jaxws-spring](https://mvnrepository.com/artifact/org.jvnet.jax-ws-commons.spring/jaxws-spring) library.  
-It has been modernized to be **Jakarta EE and Spring Boot 3 compatible**.  
+It has been modernized to be **Jakarta EE and Spring Boot 4 compatible**.  
 Original code was licensed under **CDDL 1.1** and **GPL 2.0**.
 
 Use this library for **educational purposes**, compatibility testing, or to support legacy SOAP endpoints with modern Java and Spring Boot.
@@ -20,7 +20,7 @@ Use this library for **educational purposes**, compatibility testing, or to supp
 
 - Bottom-up SOAP service support
 - Java 17 compatible
-- Spring Boot 3 compatible
+- Spring Boot 4 compatible
 - Jakarta namespace (`jakarta.xml.ws`) support
 - Maven Central ready
 
@@ -34,7 +34,7 @@ Add the dependency to your `pom.xml`:
 <dependency>
     <groupId>dev.ercan</groupId>
     <artifactId>jaxws-spring-jakarta</artifactId>
-    <version>3.5.12</version>
+    <version>4.0.4</version>
 </dependency>
 ```
 
