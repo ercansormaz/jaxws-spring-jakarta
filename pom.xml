@@ -16,13 +16,13 @@
   <packaging>jar</packaging>
 
   <name>JAX-WS Spring Jakarta</name>
-  <description>Jakarta and Spring Boot 4 compatible fork of the legacy jaxws-spring library.</description>
-  <url>https://github.com/ercansormaz/jaxws-spring-jakarta</url>
+  <description>Open-source library that enables developers to build SOAP services in Spring and Spring Boot using the Bottom-Up approach.</description>
+  <url>https://ercan.dev/projects/jax-ws-spring-jakarta-bottom-up-soap-library</url>
 
   <licenses>
     <license>
-      <name>Common Development and Distribution License (CDDL) 1.1</name>
-      <url>https://opensource.org/license/cddl-1-1</url>
+      <name>MIT License</name>
+      <url>https://opensource.org/license/MIT</url>
       <distribution>repo</distribution>
     </license>
   </licenses>

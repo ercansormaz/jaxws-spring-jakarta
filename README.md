@@ -6,20 +6,10 @@
 
 ---
 
-## ⚠️ Disclaimer
-
-This project is an **unofficial fork** of the original [org.jvnet.jax-ws-commons.spring:jaxws-spring](https://mvnrepository.com/artifact/org.jvnet.jax-ws-commons.spring/jaxws-spring) library.  
-It has been modernized to be **Jakarta EE and Spring Boot 4 compatible**.  
-Original code was licensed under **CDDL 1.1** and **GPL 2.0**.
-
-Use this library for **educational purposes**, compatibility testing, or to support legacy SOAP endpoints with modern Java and Spring Boot.
-
----
-
 ## 💡 Features
 
 - Bottom-up SOAP service support
-- Java 17 compatible
+- Java 17+ compatible
 - Spring Boot 4 compatible
 - Jakarta namespace (`jakarta.xml.ws`) support
 - Maven Central ready
@@ -34,7 +24,7 @@ Add the dependency to your `pom.xml`:
 <dependency>
     <groupId>dev.ercan</groupId>
     <artifactId>jaxws-spring-jakarta</artifactId>
-    <version>4.0.4</version>
+    <version>4.0.5</version>
 </dependency>
 ```
 
@@ -47,7 +37,9 @@ import jakarta.jws.WebService;
 
 @WebService
 public class TestService {
-  public String sayHello(String name) {
+
+  @WebResult(name = "response")
+  public String sayHello(@WebParam(name = "request") String name) {
     return "Hello " + name;
   }
 }
@@ -94,9 +86,14 @@ public class SoapServiceConfig {
 > Access the WSDL at:
 > http://localhost:8080/SOAP/TestService?wsdl
 
+---
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to fork the repo, submit pull requests or open issues.
+
 --- 
 
 ## 📄 License
 
-This project is licensed under CDDL 1.1 (educational fork of the original library).
-See [LICENSE](./LICENSE)   file for details.
+This project is licensed under the MIT License.
+
