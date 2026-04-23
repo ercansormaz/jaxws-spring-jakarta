@@ -24,7 +24,7 @@ Add the dependency to your `pom.xml`:
 <dependency>
     <groupId>dev.ercan</groupId>
     <artifactId>jaxws-spring-jakarta</artifactId>
-    <version>4.0.5</version>
+    <version>4.0.6</version>
 </dependency>
 ```
 
